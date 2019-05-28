@@ -1,0 +1,57 @@
+﻿@model Homework6_BdayCard.Models.BirthdayCard
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <title>BdayCardForm</title>
+</head>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+
+
+    <H2 class="card-header">Birthday Card Generator</H2>
+    <p></p>
+    <p></p>
+    <H1 class="h1">Birthday Card Sent</H1>
+    <p></p>
+
+    <p>
+        <label>From:</label> @Html.LabelForModel(Model.FromWho.ToString())
+    </p>
+
+    <p>
+        <label>To:</label> @Html.LabelForModel(Model.ToWho.ToString())
+    </p>
+
+    <p>
+        <label>Message:</label> @Html.LabelForModel(Model.Message.ToString())
+    </p>
+
+    <p></p>
+
+
+    <p></p>
+    <footer>
+        <p>
+            &copy; 2019 - My ASP.NET Application
+        </p>
+    </footer>
+
+
+
+
+
+
+}
